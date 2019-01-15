@@ -136,7 +136,7 @@
         In particular, the purpose of this document is to provide
       </p>
       <ul>
-        <li>a set of use cases that lead to the W3C WoT Architecture,
+        <li>a set of use cases that lead to the W3C WoT Architecture,</li>
         <li>a set of requirements for WoT implementations,</li>
         <li>an overview of the WoT building blocks being standardized and their interplay,</li>
         <li>a guideline to map the abstract architecture to software stacks and hardware components,</li>
@@ -405,15 +405,15 @@
       </ul>
       <figure id="architecture-abstract">
         <img src="images/architecture-abstract.png" style="width: 100%;" />
-        <figcaption>Abstract Architecture of W3C WoT</figcaption>
+        <figcaption>High-level goals and requirements of W3C WoT</figcaption>
       </figure>
       <p>
         <a href="#architecture-concept"></a> shows a conceptional view of how a component in the WoT Architecture makes use of the WoT building blocks.
         Each block is described in more detail in the following sections.
       </p>
       <figure id="architecture-concept">
-        <img src="images/architecture-concept.png" style="width: 640px;" />
-        <figcaption>Conceptional Architecture of the WoT Building Blocks</figcaption>
+        <img src="images/wot-abst-arch-rev.png" style="width: 640px;" />
+        <figcaption>Abstract Architecture of the WoT Building Blocks</figcaption>
       </figure>
 
       <section id="sec-building-blocks-thing">
@@ -426,12 +426,12 @@
           or even a logical entity such as a location (e.g., room or building).
         </p>
         <p>
-          <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing">Things</a> provide a network-facing API for interaction (<a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-wot-interface">WoT Interface</a>) based on a formal model.
-          These <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-wot-interface">WoT Interfaces</a> are a superset of Web APIs, as <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing">Things</a> can also be available over non-Web protocols such as MQTT or ZigBee.
-          The outward-facing <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-wot-interface">WoT Interface</a> is not to be confused with the <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-scripting-api">Scripting API</a>, which is optional and interfaces with application scripts inside the software stack of a <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing">Thing</a>.
+          <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing">Things</a> provide a network-facing API for interaction based on a formal model.
+          These interfaces are a superset of Web APIs, as <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing">Things</a> can also be available over non-Web protocols such as MQTT or ZigBee.
+          The network-facing interface is not to be confused with the <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-scripting-api">Scripting API</a>, which is optional and interfaces with application scripts inside the software stack of a <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing">Thing</a>.
         </p>
         <p>
-          There can be <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing">Things</a>, however, that do not provide a <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-wot-interface">WoT Interface</a> and only consist of metadata that is relevant to the application (e.g., the room in which devices are located).
+          There can be <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing">Things</a>, however, that do not provide a network-facing interface and only consist of metadata that is relevant to the application (e.g., the room in which devices are located).
           In W3C WoT however, a <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing">Thing</a> must have a <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing-description-td">Thing Description</a>; therefore, everything that has a <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing-description-td">Thing Description</a> is a <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-thing">Thing</a>.
         </p>
       </section>
@@ -562,7 +562,7 @@
         The detailed architecture of a <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-servient">Servient</a> is shown in <a href="#architecture-implementation"></a>.
       </p>
       <figure id="architecture-implementation">
-        <img src="images/architecture-implementation.png" style="width: 640px;" />
+        <img src="images/wot-servient-arch-rev.png" style="width: 640px;" />
         <figcaption>Implementation View of a Servient</figcaption>
       </figure>
       <p>
@@ -579,7 +579,7 @@
         <p>
           Note that the <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-scripting-api">WoT Scripting API</a> building block is optional.
           There can be minimal <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-servient">Servient</a> implementations where applications are implemented natively for the software stack.
-          These do not have the <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-scripting-api">Scripting API</a> and <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-wot-runtime">WoT Runtime</a> modules.
+          These do not have the <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-scripting-api">Scripting API</a> and <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-wot-runtime">WoT Runtime</a> modules.</p>
       </section>
 
       <section>
@@ -673,7 +673,7 @@
           <a href="#architecture-browser"></a> shows how a <a href="https://github.com/w3c/wot-architecture/blob/master/terminology.md#user-content-servient">Servient</a> implementation for Web browsers would look like.
         </p>
         <figure id="architecture-browser">
-          <img src="images/architecture-browser.png" style="width: 640px;" />
+          <img src="images/wot-browser-servient.png" style="width: 640px;" />
           <figcaption>Implementing WoT in the Web Browser</figcaption>
         </figure>
         <p>
@@ -692,7 +692,7 @@
         </p>
         <ul>
           <li>HTTP(S) (1.0/1.1/2.0) [[!RFC7230]]/[[!RFC7540]] (including Server-Sent Events [[!HTML5]]),</li>
-          <li>WebSockets [[!RFC6455]] (which enables the WoT library to implement MQTT-over-WebSockets and CoAP-over-WebSockets)
+          <li>WebSockets [[!RFC6455]] (which enables the WoT library to implement MQTT-over-WebSockets and CoAP-over-WebSockets)</li>
           <li>(S)RTP of WebRTC [[!WEBRTC]], and</li>
           <li>FTP [[!RFC765]] (which might be of limited use similar to the file protocol)</li>
         </ul>
